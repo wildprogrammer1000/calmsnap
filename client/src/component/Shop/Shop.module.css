@@ -1,0 +1,95 @@
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  padding: 8px;
+  border-bottom: 3px solid #000;
+}
+.point {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 3px solid #000;
+  background-color: var(--color-yellow-1);
+}
+.ticket {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 3px solid #000;
+  background-color: var(--color-yellow-1);
+}
+.ticket_img {
+  margin-right: 4px;
+}
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+.draw {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.draw_img {
+  margin-bottom: 12px;
+}
+
+.draw_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: 3px solid #000;
+  border-radius: 8px;
+  background-color: var(--color-yellow-1);
+}
+
+.reward {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 75%;
+  padding: 12px;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  background-color: #fff;
+  border: 3px solid #000;
+  border-radius: 20px;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+}
+.point_text,
+.reward_text {
+  line-height: 24px;
+}
+.reward_text {
+  margin-bottom: 12px;
+}
+
+.background {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 98;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
