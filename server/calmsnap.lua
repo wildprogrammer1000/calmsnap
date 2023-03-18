@@ -200,6 +200,7 @@ local function on_play_card(context, dispatcher, tick, state, message)
     local area_index = decoded['area'] + 1
     local target_area = rt.map["area_" .. area_index]
     local player_area = target_area[player.user_id]
+    if player_area and #player_area == 4 then return end
     local player_card = player.card
     local card_index = indexOf(player_card, decoded['card'])
     table.remove(player_card, card_index)
