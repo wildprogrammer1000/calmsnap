@@ -63,7 +63,6 @@ local function get_result(state)
         local temp_winner = ""
         local temp_score = 0
         for _, player in pairs(players) do
-            print("check", area_key, player.user_id)
             local score = 0;
             if area[player.user_id] then
                 for index, card in ipairs(area[player.user_id]) do
@@ -74,7 +73,6 @@ local function get_result(state)
                 if score > temp_score then
                     temp_winner = player.user_id
                     temp_score = score
-                    print("plus", player.user_id, score, temp_score)
                 elseif score == temp_score then
                     temp_winner = ""
                 end
@@ -90,8 +88,6 @@ local function get_result(state)
         end
     end
 
-    -- print("RESULT TABLE", nk.json_encode(scoreTable))
-    print("RESULT TABLE", nk.json_encode(resultTable))
     local winner = ""
     local winner_score = 0
 
@@ -101,8 +97,6 @@ local function get_result(state)
             winner_score = score
         end
     end
-
-    -- print("winner", winner, winner_score)
 
     for user_id, player in pairs(state.players) do
         if user_id == winner then
