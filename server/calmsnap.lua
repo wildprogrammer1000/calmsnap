@@ -388,7 +388,11 @@ function calmsnap.match_leave(context, dispatcher, tick, state, presences)
         end
         rt.started = false
     end
-    return state
+    if state.player_count > 0 then
+        return state
+    else
+        return nil
+    end
 end
 function calmsnap.match_loop(context, dispatcher, tick, state, messages)
     if #messages > 0 then
