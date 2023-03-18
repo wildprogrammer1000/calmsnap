@@ -73,6 +73,7 @@ local function get_result(state)
             if score ~= 0 then
                 if score > temp_score then
                     temp_winner = player.user_id
+                    score = temp_score
                     print("plus", player.user_id, score, temp_score)
                 elseif score == temp_score then
                     temp_winner = ""
