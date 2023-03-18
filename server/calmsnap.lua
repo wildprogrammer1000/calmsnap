@@ -84,12 +84,14 @@ local function get_result(state)
     local winner_score = 0
 
     for user_id, score in pairs(resultTable) do
-        print('USER_ID', nk.json_encode(state.players))
         if score > winner_score then
             winner = user_id
             winner_score = score
         end
     end
+
+    print("RESULT TABLE", nk.json_encode(resultTable))
+    print("winner", winner, winner_score)
 
     for user_id, player in pairs(state.players) do
         if user_id == winner then
