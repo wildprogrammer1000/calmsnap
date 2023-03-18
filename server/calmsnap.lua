@@ -80,6 +80,8 @@ local function get_result(state)
             end
         end
     end
+
+    print("RESULT TABLE", nk.json_encode(scoreTable))
     local winner = ""
     local winner_score = 0
 
