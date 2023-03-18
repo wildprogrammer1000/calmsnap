@@ -73,6 +73,7 @@ local function get_result(state)
             if score ~= 0 then
                 if score > temp_score then
                     temp_winner = player.user_id
+                    print("plus", player.user_id)
                 elseif score == temp_score then
                     temp_winner = ""
                 end
@@ -89,6 +90,7 @@ local function get_result(state)
     end
 
     -- print("RESULT TABLE", nk.json_encode(scoreTable))
+    print("RESULT TABLE", nk.json_encode(resultTable))
     local winner = ""
     local winner_score = 0
 
@@ -99,7 +101,6 @@ local function get_result(state)
         end
     end
 
-    -- print("RESULT TABLE", nk.json_encode(resultTable))
     -- print("winner", winner, winner_score)
 
     for user_id, player in pairs(state.players) do
